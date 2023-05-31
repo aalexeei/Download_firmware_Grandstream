@@ -50,6 +50,5 @@ To extract all firmware:
 ```bash
 python3 Extract_firmware_Grandstream.py
 ```
-## Approximate operating time 40 minutes!
 
 
