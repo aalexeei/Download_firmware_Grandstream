@@ -23,9 +23,11 @@ def extract_files_from_zip(zip_file, output_folder):
 def clear_folder(folder):
     for root, dirs, files in os.walk(folder):
         for file in files:
-            os.remove(os.path.join(root, file))
+            if not file.endswith(".xml"):
+                os.remove(os.path.join(root, file))
         for directory in dirs:
             shutil.rmtree(os.path.join(root, directory))
+
 
 
 if __name__ == "__main__":
